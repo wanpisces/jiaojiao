@@ -1,0 +1,2 @@
+<!--page/tabBar/my-webview/my-webview.wxml-->
+<web-view src="{{url}}"></web-view>

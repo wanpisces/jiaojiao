@@ -1,0 +1,22 @@
+<!--pages/manager/manager.wxml-->
+<import src="/page/tmp/manager/manager.wxml" />
+<view hidden='true' class='newsTitle'>
+  <text>微头条</text>
+</view>
+<view class='microHead'>
+  <view wx:for="{{list1}}" wx:key="keyss">
+    <template is="micro-head" data="{{item}}" />
+  </view>
+</view>
+<view class='title2'>
+  <text>更多微头条</text>
+</view>
+<view class='line'></view>
+<view class='advert'>
+  <image mode='aspectFill' src='https://img.darongshutech.com/20180228165529_rmrb.png'></image>
+</view>
+<view class='line'></view>
+<managerCommonweal />
+<view class='line'></view>
+<managerWork />
+<view class='line'></view>

@@ -1,0 +1,50 @@
+<!--pages/mine/mine.wxml-->
+<view class='base'>
+  <image class='avator' src='https://img.darongshutech.com/20180228165529_rmrb.png'></image>
+  <view class='name'>昵称</view>
+</view>
+<view class='status-wrapper'>
+  <view class='status-content'>
+    <navigator url='../../pack-mine/pages/order-show/order-show?id=0'>
+      <image style='width:32rpx;height:31rpx;' src='../../../pic/writepay-icon.png'></image>
+      <view>待支付</view>
+    </navigator>
+    <navigator url=''>
+      <image style='width:30rpx;height:31rpx;' src='../../../pic/payed.png'></image>
+      <view>待发货</view>
+    </navigator>
+    <navigator url=''>
+      <image style='width:44rpx;height:29rpx;' src='../../../pic/shop-car.png'></image>
+      <view>待收货</view>
+    </navigator>
+    <navigator url=''>
+      <image style='width:30rpx;height:35rpx;' src='../../../pic/all-order.png'></image>
+      <view>全部订单</view>
+    </navigator>
+  </view>
+</view>
+
+<button id="collection" catchtap='onItemClick' class='item' hover-class='itemHover'>
+  <image class='img' mode='aspectFill' src='/pic/mine_collection.png'></image>
+  <view class='txt'>我的收藏</view>
+  <image mode='aspectFill' class='goToImg' src='/pic/gray_arrow.png'></image>
+</button>
+
+<button id="comment" catchtap='onItemClick' class='item' hover-class='itemHover'>
+  <image class='img' mode='aspectFill' src='/pic/mine_accessment.png'></image>
+  <view class='txt'>收货地址管理</view>
+  <image mode='aspectFill' class='goToImg' src='/pic/gray_arrow.png'></image>
+</button>
+
+<button id="footprint" catchtap='onItemClick' class='item' hover-class='itemHover'>
+  <image class='img' mode='aspectFill' src='/pic/footprint.png'></image>
+  <view class='txt'>标签修改</view>
+  <image mode='aspectFill' class='goToImg' src='/pic/gray_arrow.png'></image>
+</button>
+<navigator url='/page/pack-mine/pages/mine-settings/mine-settings'>
+  <button class='item' hover-class='itemHover'>
+    <image class='img' mode='aspectFill' src='/pic/settings.png'></image>
+    <view class='txt'>关于我们</view>
+    <image mode='aspectFill' class='goToImg' src='/pic/gray_arrow.png'></image>
+  </button>
+</navigator>

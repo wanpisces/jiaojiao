@@ -1,0 +1,109 @@
+<!--page/widget/module/module.wxml-->
+ <template name="orderModule">
+     <view>
+        <view class='order-info'>
+          <view class='order-bianhao'>订单编号：1313124</view>
+          <view class='order-time'>下单时间：2018.04.05 15:32</view>
+        </view>
+        <view>
+          <view class='order-item'>
+            <view class='order-item-left'>
+              <image src='https://img.darongshutech.com/20180228165529_rmrb.png'></image>
+              <view class='order-item-goods'>
+                <view class='order-goods-name'>商品产品名字</view>
+                <text>规格：500g</text>
+              </view>
+            </view>
+            <view class='order-item-right'>
+              <view class='order-goods-price'>￥ 32.00</view>
+              <view class='order-numer'>x2</view>
+            </view>
+          </view>
+          <view class='order-item'>
+            <view class='order-item-left'>
+              <image src='https://img.darongshutech.com/20180228165529_rmrb.png'></image>
+              <view class='order-item-goods'>
+                <view class='order-goods-name'>商品产品名字</view>
+                <text>规格：500g</text>
+              </view>
+            </view>
+            <view class='order-item-right'>
+              <view class='order-goods-price'>￥ 32.00</view>
+              <view class='order-numer'>x2</view>
+            </view>
+          </view>
+        </view>
+        <view class='desever-way'>
+          <text>配送方式</text>
+          <text>快递包邮</text>
+        </view>
+        <view class='goods-total-wrapper'>
+          <text class='goods-total-price'>￥64.00</text>
+          <text> (运费 0.00)</text>
+        </view>
+    </view>
+</template>
+
+
+
+<!-- 商城列表 -->
+ <template name="mallModule">
+     <navigator url='/page/pack-mall/mall-detail/mall-detail?news_id={{item.news_id}}'>
+      <image class="mall-img" src='../../../img/first-mudule-img.jpg'></image>
+      <view class="mall-name">枣仁百合茶</view>
+      <view class="mall-price">￥55.00</view>
+    </navigator>
+</template>
+
+<!-- 购物车 -->
+<template name="no-goods">
+    <view class="title-box">
+        购物车空空如也～
+    </view>
+    <view class="to-index-btn" bindtap="toIndexPage">
+            去逛逛
+    </view>
+</template>
+
+<template name="cart-goods-list">
+    <view class="list-top">
+        <view class="edit-btn" hidden="{{!saveHidden}}" bindtap="editTap">编辑</view>
+        <view class="edit-btn" hidden="{{saveHidden}}" bindtap="saveTap">确定</view>
+    </view>
+    <view class="goodsList">
+        <view class="a-gooods" wx:for="{{list}}"  wx:key="{{index}}" >
+            <view class="a-goods-conts {{item.active? 'active':''}}"  style="{{item.left}}">
+             <!-- wx:if="{{isEdit}}" -->
+            <view  bindtap="selectTap" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}" >
+              <image  wx:if="{{isEdit}}" wx:if="{{item.active}}" class='gou-icon' src="../../../pic/gou-red.png"></image>
+               <image wx:else class='gou-icon' src="../../../pic/gou.png"></image>
+            </view>
+              
+                <view class="goods-info">
+                    <view class="img-box">
+                        <image src="{{item.pic}}" class="img"/>
+                    </view>
+                    <view class="text-box">
+                        <view class="goods-title">{{item.name}}</view>
+                        <view class="goods-label">{{item.label}}</view>
+                        <view class="goods-price">¥ {{item.price}}</view>
+                    </view>
+                </view>
+                <view class="delete-btn" data-index="{{index}}" catchtap="delItem">
+                  删除
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="jiesuan-box">
+        <view class="left-price">
+            <view class="all-selected  {{allSelect?'active':''}}" bindtap="bindAllSelect">全选</view>
+            <view class="total" hidden="{{noSelect}}">合计：¥ {{totalPrice}}</view>
+        </view>
+        <view class="to-pay-btn {{noSelect?'no-select':''}}" hidden="{{!saveHidden}}" bindtap="toPayOrder">去结算</view>
+        <view class="to-pay-btn {{noSelect?'no-select':''}}" hidden="{{saveHidden}}" bindtap="deleteSelected">删除</view>
+    </view>
+</template>
+
+
+

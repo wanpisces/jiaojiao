@@ -1,0 +1,14 @@
+@import "/page/tmp/tmp/tmp.wxss";
+@import "/page/tmp/load/listTemplate.wxss";
+.none{
+  width: 100%;
+  text-align: center;
+  font-size: 28rpx;
+  color: #999999;
+  font-weight: 600;
+  margin: 40rpx 0;
+}
+.loadMore{
+  padding-bottom: 10rpx;
+ 
+}

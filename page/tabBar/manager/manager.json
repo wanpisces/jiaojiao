@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "管家",
+  "usingComponents": {
+    "managerCommonweal": "/page/widget/managerCommonweal/managerCommonweal",
+    "managerWork": "/page/widget/managerWork/managerWork"
+  }
+}

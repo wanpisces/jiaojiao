@@ -1,0 +1,62 @@
+<template name="music">
+     <navigator url='/page/pack-index/pages/information-details/information-details?news_id={{item.news_id}}'  class='module-item'>
+  <view class='vedio-wrap'>
+    <image class='vedio-img'
+    src='../../../img/first-mudule-img.jpg'></image>
+    <view class='vedio-listen'><image src='../../../pic/listen-icon.png'></image> sfdvsf</view>
+  </view>
+  <view class='module-text'>音频名称可以叙述一下</view>
+  </navigator>
+</template>
+<template name="vedio">
+   <navigator url='/page/pack-index/pages/information-details/information-details?news_id={{item.news_id}}'  class='module-item'>
+  <view class='vedio-wrap'>
+    <image class='vedio-img' 
+    src='../../../img/first-mudule-img.jpg'></image>
+    <view class='vedio-listen'>类别</view>
+    <view class='mudel-info'>音频卖点吸引点或
+一句话介绍</view>
+  </view>
+  <view class='module-text'>音频名称可以叙述一下</view>
+  </navigator>
+</template>
+<!-- 视频  -->
+<template name="audio">
+    <navigator url='/page/pack-index/pages/information-details/information-details?news_id={{item.news_id}}' class='module-item1'>
+  <view class='vedio-wrap'>
+    <image class='vedio-img'
+    src='../../../img/first-mudule-img.jpg'></image>
+  </view>
+  <view class='module-text'>音频名称可以叙述一下</view>
+  </navigator>
+</template>
+<!-- --------------  -->
+
+ <!-- 文章列表 -->
+<template name="newsModule">
+     <navigator url='/page/pack-index/pages/information-details/information-details?news_id={{item.news_id}}' class='news-item'>
+    <image class='news-img' src='../../../img/first-mudule-img.jpg'></image>
+    <view class='news-content'>
+      <view class='news-title'>文字话题卖点吸引点或一句话介绍语文字话题卖点吸引点或一句话介绍语文字话题卖点吸引点或一句话介绍语文字话题卖点吸引点或一句话介绍语文字话题卖点吸引点或一句话介绍语文字话题卖点吸引点或一句话介绍语</view>
+      <text class='news-view'>阅读 10000</text>
+    </view>
+  </navigator>
+</template>
+ <!-- 文章列表 end-->
+
+ <!-- 热点文章 -->
+ <template name="hotspot">
+     <navigator url='/page/pack-index/pages/information-details/information-details?news_id={{item.news_id}}' class='hotspot-item'>
+      <view class='hotspot-con'>
+        <image class='hotspot-img' src='../../../img/first-mudule-img.jpg'></image>
+        <view class='hotspot-text'>
+          <view class='tag-wrap'>
+            <text>#标签</text>
+          </view>
+          <view class='hotspot-titie'>文章名称以及热点介绍</view>
+        </view>
+      </view>
+  </navigator>
+</template>
+
+

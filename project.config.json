@@ -1,0 +1,49 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.94",
+	"appid": "wxffcca5419016345c",
+	"projectname": "%E9%98%BF%E6%96%AF%E9%A1%BF%E5%8F%91%E5%B0%84%E7%82%B9",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "觉觉小开发",
+					"pathName": "page/tabBar/index/index",
+					"query": "",
+					"scene": "1011"
+				},
+				{
+					"id": 1,
+					"name": "shop-cart",
+					"pathName": "page/pack-mine/pages/mine-collection/mine-collection",
+					"query": ""
+				}
+			]
+		}
+	}
+}

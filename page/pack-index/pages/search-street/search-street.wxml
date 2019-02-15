@@ -1,0 +1,24 @@
+<!--page/pack-index/pages/search-street/search-street.wxml-->
+<form report-submit='true' bindsubmit='bindBntSearch'>
+  <view class='search'>
+    <view class='searchView'>
+      <image mode='aspectFill' class='searchImg' src='/pic/list_search.png'></image>
+      <input focus='focus' bindinput='bindinput' placeholder='请输入搜索街道' confirm-type='search' bindconfirm='bindSearch' name='value' value="{{inputTxt}}"></input>
+      <image hidden='{{!isClose}}' mode='aspectFill' class='closeImg' catchtap='bindCancel' src='/pic/cancel.png'></image>
+    </view>
+    <button class='bnt' form-type='submit' hover-class='none'>搜索</button>
+  </view>
+</form>
+
+<view class='item-txt'>
+  <image style='width:28rpx;height:28rpx;' src='/pic/hinstoryt_search_icon.png' mode='aspectFill'></image>
+  <text>历史搜索</text>
+</view>
+ <view style='height:1rpx;width:100%;background:rgba(244,244,244,1);'></view>
+  <view class='item-data'>
+    <form wx:for="{{list}}" bindsubmit='bindItem' report-submit='true' wx:key='itemKey3' data-index='{{index}}'>
+      <button class='itemdatabouttom' hover-class='none' formType="submit">
+        {{item}}
+      </button>
+    </form>
+  </view>

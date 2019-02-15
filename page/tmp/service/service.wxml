@@ -1,0 +1,71 @@
+<!-- 服务的标题  -->
+<template name="service-title">
+  <view class='title'>
+    <text class='txt'>{{title.txt}}</text>
+    <button class='serviceMore' hover-class='serviceMoreHover'>
+      <text>更多</text>
+      <image src='/pic/gray_arrow.png'></image>
+    </button>
+  </view>
+</template>
+<!-- --------------  -->
+<!-- 服务组件1  -->
+<template name="service-label1">
+  <button class='service-label' hover-class='service-label-hover'>
+    <image class='service-label-imgs' style='margin-left: 60rpx;'  mode='aspectFill' src='{{data.service_pic}}'></image>
+    <view class='txts' style='margin-right: 60rpx;'>
+      <text class='txt1'>{{data.service_title}}</text>
+      <text class='txt2'>{{data.service_desc}}</text>
+    </view>
+  </button>
+</template>
+<!-- --------------  -->
+<!-- 服务组件2  -->
+<template name="service-label2">
+  <button class="service-label" hover-class='service-label-hover'>
+    <view wx:if="{{data.type==2}}" class="txts3" style='margin-left: 30rpx;'>
+      <view class="txt1">{{data.service_title}}</view> 
+      <view class="txt2">{{data.service_desc}}</view>
+    </view>
+    <view wx:else class="txts2" style='margin-left: 65rpx;'>
+      <view class="txt1">{{data.service_title}}</view>
+      <view class="txt2">{{data.service_desc}}</view>
+    </view>
+    <image class='service-label-imgs' style="{{data.type==2?'margin-right: 50rpx;':'margin-right: 50rpx;'}}" mode='aspectFill' src='{{data.service_pic}}'></image>
+  </button>
+</template>
+<!-- --------------  -->
+<!-- 随手拍 -->
+<template name="suishoupai">
+
+  <view class='suishoupai'>
+    <view class='suishoupaititle'>
+      <image mode='aspectFill' src='/pic/foot_mine_touch.png'></image>
+      <view class='nameView'>
+        <view>浅笑不语</view>
+        <text>2018-03-01 16:20</text>
+      </view>
+      <text style="{{item.type == 0?'color:#BBBBBB':''}}">{{item.type == 0?'已结案':'待办理'}}</text>
+    </view>
+    <view class='content'>
+      <text>#环境卫生#</text>{{item.txt}}
+    </view>
+    <view class='imgs'>
+      <view wx:for='{{item.imgs}}' wx:key='imgKey'>
+        <image mode='aspectFill' src='{{item.url}}'></image>
+      </view>
+    </view>
+    <view wx:if='{{item.details}}' class='suishoupaiAddr'>
+      <image mode='aspectFill' src='/pic/location.png'></image>
+      <text>四川省成都市华阳区华阳街道万达中路177号</text>
+    </view>
+    <view class='bnts'>
+      <button class="{{item.clickId==1?'selectBt':''}}">官方回复
+        <text>（2）</text>
+      </button>
+      <button class="{{item.clickId==2?'selectBt':''}}" style=' border-left: 1rpx solid #f2f2f2;'>评论列表
+        <text>（2）</text>
+      </button>
+    </view>
+  </view>
+</template>

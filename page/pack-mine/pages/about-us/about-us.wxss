@@ -1,0 +1,64 @@
+/* page/pack-mine/pages/about-us/about-us.wxss */
+.logo-v {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 333rpx;
+}
+
+.logo-v image {
+  width: 82rpx;
+  height: 82rpx;
+}
+
+.logo-v view {
+  margin-top: 20rpx;
+  font-size: 34rpx;
+  line-height: 40rpx;
+}
+
+.introduce {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0rpx 50rpx 100rpx 50rpx;
+  width:650rpx;
+  line-height: 46rpx;
+  font-size: 30rpx;
+  color: #999;
+}
+
+.saoma {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.saoma image {
+  width: 260rpx;
+  height: 260rpx;
+}
+
+.saoma text {
+  font-size: 26rpx;
+  color: #353535;
+  margin-top: 10rpx;
+}
+
+.bottomTxt {
+  position: fixed;
+  bottom: 40rpx;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottomTxt text {
+  font-size: 24rpx;
+  color: #999;
+}

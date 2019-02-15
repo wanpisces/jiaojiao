@@ -1,0 +1,13 @@
+<import src="/page/tmp/tmp/tmp.wxml" />
+<import src="/page/tmp/load/listTemplate.wxml" />
+<view>
+  <view wx:for='{{list}}' wx:key='dataKey'>
+    <template is="{{item.news_pic_type != 1 ?'news_item1':'news_item2'}}" data="{{item}}" />
+  </view>
+  <view wx:if="{{list.length>0}}" class='loadMore'>
+    <template wx:if='{{!!loadData}}' is='loadMore' data="{{loadData}}" />
+  </view>
+  <view wx:else style="{{isFull?'':'height:750rpx; display: flex;flex-flow: column;justify-content: center;align-items: center;'}}">
+    <template  is="{{isFull?'emptyView':'emptyView2'}}" data="{{empty}}" />
+  </view>
+</view>

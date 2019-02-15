@@ -1,0 +1,207 @@
+<!--pages/index/index.wxml-->
+<import src="/page/tmp/tmp/tmp.wxml" />
+<view class='index-container'>
+  <view class='fixed-moudle'>
+    <view class='search-wrapper'>
+      <view class='inpt-wrapper'>
+      <image class='searcha-img' src='../../../pic/searcha.png'></image>
+        <input placeholder='搜索'></input>
+      </view>
+    </view>
+    <view class="label1">
+      <view class='label'>
+        <view class="label-item {{curLabelIndex == index?'active':''}}" 
+        hover-class='label-item-hover' 
+        wx:for='{{labelList}}' 
+        wx:key='index'
+        bindtap="switchTab"
+        data-index='{{index}}'>
+        <text class="text-line1 ">{{item}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+    <swiper
+     interval="500" duration="200"  style="height:{{scrollHeight}}px" current="{{curLabelIndex}}">
+      <block>
+        <swiper-item>
+            <scroll-view style="height:{{scrollHeight}}px" scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-top="{{scrollTop}}"> 
+            <swiper indicator-dots="{{indicatorDots}}"
+              autoplay="{{true}}" interval="4000" duration="1000" indicator-dots='{{indicatorDots}}' indicator-active-color="#9661fa" style='height:300rpx;'>
+              <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+                <swiper-item>
+                  <navigator class='first-module'>
+                  <image src="{{item}}" class="slide-image"/>
+                  </navigator>
+                </swiper-item>
+              </block>
+            </swiper>
+            <title-cloum title="每日推荐"/>
+            <view class='module-wrap'>
+              <template  is="music"/>
+              <template  is="music"/>
+              <template  is="vedio"/>
+            </view>
+            <view  class='module-wrap'>
+                <template  is="audio"/>
+                <template  is="audio"/>
+            </view>
+            <title-cloum title="觉觉排行" linkSrc="asd"/>
+            <view class='sort-list-wrapper'>
+              <view class='sort-item'>
+                <template  is="newsModule"/>
+                <view class='sort-num sort-num1'>1</view>
+              </view>
+              <view class='sort-item'>
+                <template  is="newsModule"/>
+                <view class='sort-num sort-num2'>2</view>
+              </view>
+              <view class='sort-item'>
+                <template  is="newsModule"/>
+                <view class='sort-num sort-num3'>3</view>
+              </view>
+            </view>
+            <view class='hotspot-wrapper'>
+              <title-cloum title="实时热点" linkSrc="asd"/>
+              <template  is="hotspot"/>
+              <template  is="hotspot"/>
+              <template  is="hotspot"/>
+              <template  is="hotspot"/>
+            </view>
+           </scroll-view> 
+        </swiper-item>
+      </block>
+       <block>
+        <swiper-item>
+            <scroll-view style="height:{{scrollHeight}}px" scroll-y  bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-top="{{scrollTop}}"> 
+            <swiper indicator-dots="{{indicatorDots}}"
+            autoplay="{{true}}" interval="4000" duration="1000" indicator-dots='{{indicatorDots}}' indicator-active-color="#9661fa" style='height:300rpx;'>
+            <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+              <swiper-item>
+                <navigator class='first-module'>
+                <image src="{{item}}" class="slide-image"/>
+                </navigator>
+              </swiper-item>
+            </block>
+          </swiper>
+            <title-cloum title="视频二级栏目" linkSrc="asd"/>
+            <view>
+              <vedio style="width:100%;"/> 
+              <vedio style="width:100%;"/> 
+            </view>
+            <view  class='tag-list-wrap'>
+              <navigator url=''>
+                # 标签
+              </navigator>
+               <navigator url=''>
+                # 标签
+              </navigator>
+               <navigator url=''>
+                # 标签
+              </navigator>
+               <navigator url=''>
+                # 标签
+              </navigator>
+               <navigator url=''>
+                # 标签
+              </navigator>
+               <navigator url=''>
+                # 标签
+              </navigator>
+               <navigator url=''>
+                # 标签
+              </navigator>
+               <navigator url=''>
+                # 标签
+              </navigator>
+            </view>
+            <navigator url='' class='more-vedio'>
+              <image src='../../../pic/more-right-icon.png'></image>
+              更多视频
+            </navigator>
+            <title-cloum title="视频二级栏目" linkSrc="asd"/>
+            <view>
+              <vedio style="width:100%;"/> 
+              <vedio style="width:100%;"/> 
+            </view>
+           </scroll-view> 
+        </swiper-item>
+      </block>
+       <block>
+        <swiper-item>
+            <scroll-view scroll-y style="height:{{scrollHeight}}px" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-top="{{scrollTop}}"> 
+            <swiper indicator-dots="{{indicatorDots}}"
+            autoplay="{{true}}" interval="4000" duration="1000" indicator-dots='{{indicatorDots}}' indicator-active-color="#9661fa" style='height:300rpx;'>
+            <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+              <swiper-item>
+                <navigator class='first-module'>
+                <image src="{{item}}" class="slide-image"/>
+                </navigator>
+              </swiper-item>
+            </block>
+          </swiper>
+            <title-cloum title="每日热门音乐"/>
+            <view class='module-wrap'>
+               <template  is="music"/>
+                <template  is="music"/>
+                <template  is="music"/>
+                <template  is="music"/>
+               <template  is="music"/>
+              <template  is="music"/>
+            </view>
+            <title-cloum title="音乐类型" linkSrc="asd"/>
+            <view class='module-wrap'>
+               <template  is="vedio"/>
+                <template  is="vedio"/>
+                <template  is="vedio"/>
+            </view>
+            <title-cloum title="音乐类别专栏" linkSrc="asd"/>
+            <view>
+              <template  is="newsModule"/>
+              <template  is="newsModule"/>
+            </view>
+           </scroll-view> 
+        </swiper-item>
+      </block>
+       <block>
+        <swiper-item>
+            <scroll-view scroll-y style="height:{{scrollHeight}}px" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-top="{{scrollTop}}"> 
+            <swiper indicator-dots="{{indicatorDots}}"
+            autoplay="{{true}}" interval="4000" duration="1000" indicator-dots='{{indicatorDots}}' indicator-active-color="#9661fa" style='height:300rpx;'>
+            <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+              <swiper-item>
+                <navigator class='first-module'>
+                <image src="{{item}}" class="slide-image"/>
+                </navigator>
+              </swiper-item>
+            </block>
+          </swiper>
+            <title-cloum title="音频推荐栏目"/>
+            <view class='module-wrap'>
+              <template  is="vedio"/>
+                <template  is="vedio"/>
+                <template  is="vedio"/>
+                <template  is="vedio"/>
+                <template  is="vedio"/>
+                <template  is="vedio"/>
+            </view>
+            <title-cloum title="音频二级分类"  linkSrc="asd"/>
+            <view class='module-wrap'>
+              <template  is="vedio"/>
+                <template  is="vedio"/>
+                <template  is="vedio"/>
+            </view>
+            <view  class='module-wrap'>
+              <audio  class='module-item1'/>
+              <audio  class='module-item1'/>
+            </view>
+            <title-cloum title="音频类别专栏" linkSrc="asd"/>
+            <view>
+              <template  is="newsModule"/>
+              <template  is="newsModule"/>
+            </view>
+           </scroll-view> 
+        </swiper-item>
+      </block>
+    </swiper>
+</view>

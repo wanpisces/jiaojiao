@@ -1,0 +1,41 @@
+.goods-collect-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+  padding: 0 24rpx;
+  height: 200rpx;
+  background: #fff;
+}
+.goods-img{
+  width: 140rpx;
+  height: 140rpx;
+}
+.goodd-collect-left{
+  display: flex;
+  flex-flow: row;
+}
+.goods-collect-text{
+  margin-left: 24rpx;
+  width: 400rpx;
+}
+.goods-collect-name{
+  height: 105rpx;
+  font-size: 28rpx;
+  color: #333333;
+}
+.goods-collect-price{
+  font-size: 28rpx;
+  color: #333333;
+}
+.cancel-collect{
+  text-align: center;
+  margin-top: 125rpx;
+  width: 106rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  font-size: 20rpx;
+  color: #ac8ff2;
+  border: 1px solid #ac8ff2;
+  border-radius: 15rpx;
+}

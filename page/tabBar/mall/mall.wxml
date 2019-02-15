@@ -1,0 +1,43 @@
+<!--page/tabBar/mall/mall.wxml-->
+<import src="/page/tmp/tmp/tmp.wxml" />
+<import src="/page/tmp/module/module.wxml" />
+<swiper indicator-dots="{{indicatorDots}}"
+autoplay="{{true}}" interval="4000" duration="1000" indicator-dots='{{indicatorDots}}' indicator-active-color="#9661fa" style='height:300rpx;'>
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item>
+      <navigator class='first-module'>
+      <image src="{{item}}" class="slide-image"/>
+      </navigator>
+    </swiper-item>
+  </block>
+</swiper>
+<view class='search-wrapper'>
+  <view class='inpt-wrapper'>
+  <image class='searcha-img' src='../../../pic/searcha.png'></image>
+    <input placeholder='搜索'></input>
+  </view>
+</view>
+<view class='mall-wrapper'>
+  <view class='mall-main'>
+    <view class='mall-title'>
+      <image src='../../../img/mall-icon.png'></image>睡眠花草茶
+    </view>
+    <view class='mall-module'>
+      <template  is="mallModule"/>
+      <template  is="mallModule"/>
+      <template  is="mallModule"/>
+      <template  is="mallModule"/>
+    </view>
+  </view>
+  <view class='mall-main'>
+    <view class='mall-title'>
+      <image src='../../../img/mall-icon.png'></image>睡眠花草茶
+    </view>
+    <view class='mall-module'>
+      <template  is="mallModule"/>
+      <template  is="mallModule"/>
+      <template  is="mallModule"/>
+      <template  is="mallModule"/>
+    </view>
+  </view>
+</view>

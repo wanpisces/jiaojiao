@@ -1,0 +1,24 @@
+<template name="newsCollect">
+     <navigator url='/page/pack-index/pages/information-details/information-details?news_id={{item.news_id}}'  class='news-collect-item'>
+  <view class='vedio-wrap'>
+    <image class='vedio-img'
+    src='../../../img/first-mudule-img.jpg'></image>
+    <view class='vedio-listen'><image src='../../../pic/listen-icon.png'></image> sfdvsf</view>
+  </view>
+  <view class='module-text'>音频名称可以叙述一下</view>
+  </navigator>
+</template>
+<!-- 商品收藏 -->
+<template name="goodsCollect">
+     <navigator url='/page/pack-index/pages/information-details/information-details?news_id={{item.news_id}}'  class='goods-collect-item'>
+     <view class='goodd-collect-left'>
+       <image class='goods-img' src='https://img.darongshutech.com/20180228165529_rmrb.png'></image>
+      <view class='goods-collect-text'>
+        <view class='goods-collect-name'>商品产品名字</view>
+        <view class='goods-collect-price'>￥32.00</view>
+      </view>
+     </view>
+    <view class='cancel-collect'>取消收藏</view>
+
+  </navigator>
+</template>

@@ -1,0 +1,12 @@
+<!--page/widget/titleCloum/titleCloum.wxml-->
+<view class='title-wrapper'>
+  <view class='title-line'></view>
+  <navigator wx:if="{{linkSrc}}" class='title-content' url='{{linkSrc}}'>
+    <text>{{title}}</text>
+    <image class='more-link' src='../../../pic/more-icon.png'></image>
+  </navigator>
+  <view class='title-content' wx:else>
+    <text>{{title}}</text>
+  </view>
+
+</view>

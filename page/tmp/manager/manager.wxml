@@ -1,0 +1,47 @@
+<template name="micro-head">
+  <view class='item'>
+    <view class='leftView'>
+      <text class='title text-line2'>{{item.txt}}</text>
+      <view class='attribute'>
+        <image mode='aspectFill' class='commentImg' src='/pic/accessment.png'></image>
+        <text class='commentTxt'>{{item.num1}}</text>
+        <image mode='aspectFill' class='readImg' src='/pic/read.png'></image>
+        <text class='readTxt'>{{item.num2}}</text>
+        <text class='time'>{{item.time}}</text>
+      </view>
+    </view>
+    <image mode='aspectFill' class='imgBig' src='{{item.img}}'></image>
+
+  </view>
+</template>
+
+<template name="manager-title">
+  <view class='loveTitle'>
+    <view class='txt'>
+      <text>— {{title.txt}} —</text>
+    </view>
+    <button hidden='{{title.isHidden}}' class='more' hover-class='moreHover'>
+      <text>更多</text>
+    </button>
+  </view>
+</template>
+
+<template name="manager-label1">
+  <button class='manager-label' hover-class='manager-label-hover'>
+    <view class="txts {{align == 1 ?'alignCenter':''}}">
+      <text class='txt1'>{{data.txt1}}</text>
+      <text class='txt2'>{{data.txt2}}</text>
+    </view>
+    <image class='manager-label-imgs' mode='aspectFill' src='{{data.icon}}'></image>
+  </button>
+</template>
+
+<template name="manager-label2">
+  <button class='managerLabel2' hover-class='manager-label-hover'>
+    <view class='txts'>
+      <text class='txt1'>{{data.txt1}}</text>
+      <text class='txt2'>{{data.txt2}}</text>
+    </view>
+    <image class='managerLabelImgs' mode='aspectFill' src='{{data.icon}}'></image>
+  </button>
+</template>

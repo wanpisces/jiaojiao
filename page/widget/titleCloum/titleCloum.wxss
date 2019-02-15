@@ -1,0 +1,26 @@
+/* page/widget/titleCloum/titleCloum.wxss */
+.title-wrapper{
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  height: 100rpx;
+}
+.title-line{
+  margin-left: 24rpx;
+  height: 28rpx;
+  width: 6rpx;
+  background: #9661fa;
+  border-radius: 10rpx;
+}
+.title-content{
+  display: flex;
+  align-items: center;
+  padding-left: 18rpx;
+  font-size: 32rpx;
+  color: #333333;
+}
+.more-link{
+  margin-left: 22rpx;
+  width: 18rpx;
+  height: 28rpx;
+}

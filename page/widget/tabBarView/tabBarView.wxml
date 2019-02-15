@@ -1,0 +1,10 @@
+<!--page/widget/tabBarView/tabBarView.wxml-->
+<view>
+  <view class='b_view'></view>
+  <view class='tabBar'>
+    <view class="tab {{index==1?'tab2':'tab1'}}" wx:for="{{tabBar}}" wx:key='rKey' catchtap="tabBarChange" data-index='{{index}}'>
+      <image style="{{index==1?'width: 120rpx;height: 120rpx;':'width: 81rpx;height: 81rpx;'}}" mode='aspectFill' src="{{(item.checked && !!item.selectedIconPath)?item.selectedIconPath:item.iconPath}}"></image>
+      <text style="{{item.checked?'font-size: 22rpx;color: #ff8d17;padding-bottom: 15rpx;':'font-size: 22rpx;color: #999;padding-bottom: 15rpx;'}}">{{item.value}}</text>
+    </view>
+  </view>
+</view>

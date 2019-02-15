@@ -1,0 +1,25 @@
+<!--page/pack-mine/pages/about-us/about-us.wxml-->
+<view>
+  <view style='width:100%;background:#e5e5e5;height:1rpx;'>
+  </view>
+  <view class='logo-v'>
+    <image mode='aspectFill' src='/pic/icon.png'>
+    </image>
+    <view>社区一点通</view>
+  </view>
+  <view class='introduce'>
+    <text>
+    社会一点通主要体现在通过微信小程序、微信公众号、自助终端、APP实现政务公开、在线办理、政民互动等服务，打造24小时不间断的与群众、企业零距离的网上政务大厅，通过后台强大的资讯回溯系统、数据可视化系统、电子监察系统为未来政府决策提供大数据智能分析，实现智慧政府服务体系。
+  </text>
+
+  </view>
+  <!-- <view class='saoma'>
+    <image mode='aspectFill' src='/pic/code.png'></image>
+    <text>扫描二维码关注我们</text>
+  </view> -->
+  <view class='bottomTxt'>
+    <text>copyright@2016-2026</text>
+    <text>四川大榕树数据技术有限公司</text>
+  </view>
+
+</view>

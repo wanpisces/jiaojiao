@@ -1,0 +1,96 @@
+/* page/pack-index/pages/search-street/search-street.wxss */
+
+.search {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 140rpx;
+  align-items: center;
+  background: #f2f2f2;
+}
+
+.search .searchView {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 65rpx;
+  border-radius: 32rpx;
+  flex-grow: 1;
+  margin-left: 43rpx;
+  align-items: center;
+  background: #fff;
+}
+
+.search .searchView  input {
+  font-size: 28rpx;
+  color: rgba(73, 204, 252, 1);
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  width: 434rpx;
+}
+
+.search .searchView  .searchImg {
+  margin-left: 39rpx;
+  width: 34rpx;
+  height: 34rpx;
+}
+
+.search .searchView  .closeImg {
+  padding: 20rpx;
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.search .bnt {
+  font-size: 28rpx;
+  width: 108rpx;
+  color: rgba(73, 204, 252, 1);
+  text-align: center;
+  padding: 10rpx 0;
+  margin: 0rpx;
+  border-radius: 0;
+  background: #f2f2f2;
+  line-height: 1;
+}
+
+.search .bnt::after {
+  border: 0;
+}
+
+.item-txt {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: 95rpx;
+  line-height: 60rpx;
+}
+
+.item-txt image {
+  margin-left: 25rpx;
+}
+
+.item-txt text {
+  font-size: 32rpx;
+  color: rgba(53, 53, 53, 1);
+  margin-left: 10rpx;
+  flex-grow: 0;
+}
+
+.item-data {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 27rpx;
+}
+
+.itemdatabouttom {
+  border-radius: 23rpx;
+  background: #eaeaea;
+  margin: 15rpx;
+  padding: 8rpx 25rpx 8rpx 25rpx;
+  color: #999;
+  font-size: 26rpx;
+  line-height: 1.5;
+}
+
+button[class="itemdatabouttom"]::after {
+  border: 0;
+}

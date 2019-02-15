@@ -1,0 +1,63 @@
+<!--page/pack-mine/pages/order-show/order-show.wxml-->
+<import src="/page/tmp/module/module.wxml" />
+<view class='order-btn-wrapper'>
+  <view class='label'>
+    <view class="label-item {{curLabelIndex == index?'active':''}}" 
+    hover-class='label-item-hover' 
+    wx:for='{{labelList}}' 
+    wx:key='index'
+    bindtap="switchTab"
+    data-index='{{index}}'>
+    <text class="text-line1 ">{{item}}</text>
+    </view>
+  </view>
+</view>
+<swiper
+     interval="500" duration="200"  style="height:{{scrollHeight}}px" current="{{curLabelIndex}}">
+      <block>
+        <swiper-item>
+          <view class='goods-list-item'>
+             <template  is="orderModule"/>
+            <view class='orderBtn-wrapper'>
+              <view class='order-btn-content'>去付款</view>
+            </view>
+          </view>
+        </swiper-item>
+       </block>
+       <block>
+        <swiper-item>
+         <view class='goods-list-item'>
+            <template  is="orderModule"/>
+            <view class='orderBtn-wrapper'>
+              <view class='order-btn-content'>取消订单</view>
+            </view>
+          </view>
+        </swiper-item>
+       </block>
+       <block>
+        <swiper-item>
+          <view class='goods-list-item'>
+            <template  is="orderModule"/>
+            <view class='orderBtn-wrapper'>
+              <view class='order-btn-content'>查看物流</view>
+              <view class='order-btn-content'>确认收货</view>
+            </view>
+          </view>
+          <view class="no-order" hidden="{{orderList ? true : false}}">
+            <image src="../../../../pic/nodata.png" class="no-order-img"></image>
+            <view class="text">暂无订单</view>
+        </view>
+        </swiper-item>
+       </block>
+       <block>
+        <swiper-item>
+          <view class='goods-list-item'>
+            <template  is="orderModule"/>
+            <view class='orderBtn-wrapper'>
+              <view class='order-btn-content'>查看物流</view>
+              <view class='order-btn-content'>确认收货</view>
+            </view>
+          </view>
+        </swiper-item>
+       </block>
+</swiper>

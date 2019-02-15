@@ -1,0 +1,44 @@
+<!--page/pages/preview-view/preview-view.wxml-->
+<import src="/libs/wxParse/wxParse.wxml" />
+<view id='j_page'>
+  <view class='title'>
+    <view class='title_txt'>{{news_title}}</view>
+    <view class='state'>
+      <image mode='aspectFill' class='img1' src='/pic/xq_accessment.png'></image>
+      <text class='tv1'>{{comment_num}}</text>
+      <image mode='aspectFill' class='img2' src='/pic/xq_read.png'></image>
+      <text class='tv1'>{{visit_num}}</text>
+      <image mode='aspectFill' class='img3' src='/pic/xq_zan.png'></image>
+      <text class='tv1'>{{star_num}}</text>
+      <view class='tv3'>{{create_time}}</view>
+    </view>
+  </view>
+  <view class='detail-container'>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  </view>
+  <view class='explain'>
+    <view class='label'>
+      <view wx:for="{{tags}}" class='item' wx:key='itemKey'>
+        {{item}}
+      </view>
+    </view>
+    <view wx:if="{{false}}" class='buts'>
+      <form report-submit='true' bindsubmit='praise'>
+        <view class='praise'>
+          <button style="{{isStar == 2?'border: 1rpx solid #FE646F;':'border: 1rpx solid #DADADA;'}}" hover-class='none' form-type='submit'>
+            <image mode='aspectFill' src="{{isStar == 2?'/pic/zan_touch.png':'/pic/zan.png'}}"></image>
+          </button>
+          <text style="{{isStar == 2?'color:#FE646F;':'color:#515151;'}}">{{isStar == 2?'已点赞':'点个赞'}}</text>
+        </view>
+      </form>
+      <form report-submit='true' bindsubmit='gohome'>
+        <view class='home'>
+          <button disabled="{{staring}}" style="{{isHome == 0?'border: 1rpx solid #DADADA;':'  border: 1rpx solid #2EA3FC;'}}" hover-class='none' form-type='submit'>
+            <image mode='aspectFill' src="{{isHome == 0?'/pic/index.png':'/pic/back_index.png'}}"></image>
+          </button>
+          <text style="{{isHome == 0?'color:#515151;':'color:#2EA3FC;'}}">回首页</text>
+        </view>
+      </form>
+    </view>
+  </view>
+</view>

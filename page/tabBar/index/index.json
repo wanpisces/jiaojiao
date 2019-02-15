@@ -1,0 +1,13 @@
+{
+  "window": {
+      "backgroundTextStyle": "light",
+      "navigationBarBackgroundColor": "#000",
+      "navigationBarTitleText": "觉觉",
+      "navigationBarTextStyle": "black",
+      "navigationStyle": "custom"
+  },
+  "usingComponents": {
+    "title-cloum":"/page/widget/titleCloum/titleCloum",
+    "vedio":"/page/widget/vedio/vedio"
+  }
+}

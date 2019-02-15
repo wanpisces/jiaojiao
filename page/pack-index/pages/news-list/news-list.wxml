@@ -1,0 +1,2 @@
+<!--pages/index/news_list/news_list.wxml-->
+   <newsView is-full="{{true}}" list="{{dataList}}" load-data="{{loadData}}"/> 

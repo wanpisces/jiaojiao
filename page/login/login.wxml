@@ -1,0 +1,9 @@
+<!--page/login/login.wxml-->
+<view class='login-logo'>
+  <image src='https://img.darongshutech.com/20180228165529_rmrb.png'></image>
+  <view class='product-info'>觉觉小</view>
+</view>
+<view class='login-btn-wrapper'>
+  <view class='login-btn' bindtap="myLogin">登录</view>
+</view>
+

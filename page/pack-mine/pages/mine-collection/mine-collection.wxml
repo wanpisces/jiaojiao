@@ -1,0 +1,36 @@
+<!--page/pack-mine/pages/mine-collection/mine-collection.wxml-->
+<import src="/page/tmp/collecTmp/collecTmp.wxml" />
+<view class='order-btn-wrapper'>
+  <view class='label'>
+    <view class="label-item {{curLabelIndex == index?'active':''}}" 
+    hover-class='label-item-hover' 
+    wx:for='{{labelList}}' 
+    wx:key='index'
+    bindtap="switchTab"
+    data-index='{{index}}'>
+    <text class="text-line1 ">{{item}}</text>
+    </view>
+  </view>
+</view>
+<swiper
+     interval="500" duration="200"  style="height:{{scrollHeight}}px" current="{{curLabelIndex}}">
+      <block>
+        <swiper-item>
+          <view class='news-collect-item'>
+             <template  is="newsCollect"/>
+          </view>
+        </swiper-item>
+       </block>
+       <block>
+        <swiper-item class="goods-collect-wrapper">
+        <template  is="goodsCollect"/>
+        <template  is="goodsCollect"/>
+        <template  is="goodsCollect"/>
+        </swiper-item>
+       </block>
+       <block>
+        <swiper-item>
+         
+        </swiper-item>
+       </block>
+</swiper>
